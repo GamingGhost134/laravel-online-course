@@ -2,7 +2,8 @@
 
 Welcome to **Laravel Online Course**, where cutting-edge technology meets interactive education!
 
-![Laravel Online Course](link-to-logo.png)
+So for ui and frontend we are using a template named educenter-bootstrap made by themefisher
+You can check the template from https://github.com/themefisher/educenter-bootstrap
 
 ## Overview
 
