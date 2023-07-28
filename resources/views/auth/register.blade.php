@@ -56,7 +56,7 @@
                                 <input type="email" name="email" id="email"
                                     placeholder="Enter Your Email Address" class="form-control" required
                                     value="{{ old('email') }}">
-                                <span id="emailError" class="text-danger"></span> <!-- Add id for error message -->
+                                <span id="emailError" class="text-danger"></span>
                                 @error('email')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -92,6 +92,7 @@
 
     @include('../footer')
     @include('../scripts')
+    <script src="{{ asset('js/register.js') }}"></script>
 </body>
 
 </html>

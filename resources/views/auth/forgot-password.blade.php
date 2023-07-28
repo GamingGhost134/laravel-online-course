@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Laravel Online Course - Login</title>
+    <title>Laravel Online Course - Forgot Password</title>
     @include('../css')
 </head>
 
@@ -22,10 +22,10 @@
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb mb-2">
                         <li class="list-inline-item"><a class="h2 text-primary font-secondary"
-                                href="{{url('/')}}">Home</a></li>
-                        <li class="list-inline-item text-white h3 font-secondary nasted">Login</li>
+                                href="{{ url('/') }}">Home</a></li>
+                        <li class="list-inline-item text-white h3 font-secondary nasted">Forgot-Password</li>
                     </ul>
-                    <p class="text-lighten mb-0">Login to your account and start your learning journey.</p>
+                    <p class="text-lighten mb-0">Enter your email address to reset your password.</p>
                 </div>
             </div>
         </div>
@@ -37,49 +37,32 @@
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
-                        <h2 class="login-text">Login</h2>
+                        <h2 class="forgot-text">Forgot Password</h2>
                     </div>
                     <div class="card-body">
                         @if (session('error'))
                             <div class="alert alert-danger">
                                 {{ session('error') }}
                             </div>
-                        @elseif(session('success'))
+                        @endif
+                        @if (session('success'))
                             <div class="alert alert-success">
                                 <p class="text-center">{{ session('success') }}</p>
                             </div>
                         @endif
-                        <form action="/login" method="POST">
+                        <form action="/forgot-password" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="email" name="email" id="email"
-                                    placeholder="Enter Your Email Address" class="form-control" required
+                                    placeholder="Enter Your Registered Email Address " class="form-control" required
                                     value="{{ old('email') }}">
                                     <span id="emailError" class="text-danger"></span>
                                 @error('email')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" name="password" id="password" placeholder="Enter Your Password"
-                                    class="form-control" required>
-                                    <span id="passwordError" class="text-danger"></span>
-                                @error('password')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember">
-                                <label class="form-check-label" for="remember">
-                                    Remember Me
-                                </label>
-                            </div>
-                            <div class="form-group text-center">
-                                <a href="/forgot-password" class="text-primary">Forgot Password?</a>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <button type="submit" class="btn btn-primary btn-block">Send Reset Password Link</button>
                         </form>
                         <p class="mt-3 text-center text-secondary">Don't have an account? <a href="/register"
                                 class="text-primary">Register here</a></p>
@@ -90,7 +73,7 @@
     </div>
     @include('../footer')
     @include('../scripts')
-    <script src="{{ asset('js/login.js') }}"></script>
+    <script src="{{ asset('js/forgot-password.js')}}"></script>
 </body>
 
 </html>

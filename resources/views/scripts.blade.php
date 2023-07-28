@@ -16,5 +16,4 @@
 <script src="{{ asset('plugins/google-map/gmap.js') }}"></script>
 <!-- Main Script -->
 <script src="{{ asset('js/script.js') }}"></script>
-<script src="{{ asset('js/login.js') }}"></script>
-<script src="{{ asset('js/register.js') }}"></script>
+
