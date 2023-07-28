@@ -16,4 +16,5 @@
 <script src="{{ asset('plugins/google-map/gmap.js') }}"></script>
 <!-- Main Script -->
 <script src="{{ asset('js/script.js') }}"></script>
-
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/1e4bb7c436.js" crossorigin="anonymous"></script>
