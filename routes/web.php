@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/reset-password/{token}', [AuthController::class, 'resetpasswordindex'])->name('reset-password');
     Route::post('/reset-password', [AuthController::class, 'resetpassword'])->name('reset-password');
 });
+
+Route::get('/courses', [CourseController::class, 'courselist'])->name('courses');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

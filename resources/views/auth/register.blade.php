@@ -14,6 +14,11 @@
 </head>
 
 <body>
+    <!-- preloader start -->
+    <div class="preloader">
+        <img src="images/preloader.gif" alt="preloader">
+    </div>
+    <!-- preloader end -->
     @include('../header')
     <!-- page title -->
     <section class="page-title-section overlay" data-background="{{ asset('images/backgrounds/page-title.jpg') }}">

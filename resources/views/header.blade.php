@@ -18,8 +18,8 @@
                         <li class="nav-item {{ request()->is('about') ? 'active' : ''}} @@about">
                             <a class="nav-link" href="{{ url('about') }}">About</a>
                         </li>
-                        <li class="nav-item {{ request()->is('course') ? 'active' : ''}} @@courses">
-                            <a class="nav-link" href="{{ url('about') }}">COURSES</a>
+                        <li class="nav-item {{ request()->is('courses') ? 'active' : ''}} @@courses">
+                            <a class="nav-link" href="{{ url('courses') }}">COURSES</a>
                         </li>
                         <li class="nav-item {{ request()->is('events') ? 'active' : ''}} @@events">
                             <a class="nav-link" href="{{ url('events') }}">EVENTS</a>
